@@ -1,5 +1,4 @@
 // tooling
-import postcss from 'postcss';
 import postcssAdvancedVariables from 'postcss-advanced-variables';
 import postcssAtroot from 'postcss-atroot';
 import postcssExtendRule from 'postcss-extend-rule';
@@ -17,21 +16,21 @@ const plugins = [
 	postcssNested
 ];
 
-// plugin
-export default postcss.plugin('precss', rawopts => {
-	// initialize options, defaulting preset-env to stage 0 features
-	const opts = Object.assign({ stage: 0 }, rawopts);
+export default (rawopts) => {
+  return {
+    postcssPlugin: 'precss',
+    Once(root) {
+      const opts = Object.assign({
+        stage: 0
+      }, rawopts); // initialize all plugins
 
-	// initialize all plugins
-	const initializedPlugins = plugins.map(
-		plugin => plugin(opts)
-	);
+      const initializedPlugins = plugins.map(plugin => plugin(opts)); // process css with all plugins
 
-	// process css with all plugins
-	return (root, result) => initializedPlugins.reduce(
-		(promise, plugin) => promise.then(
-			() => plugin(result.root, result)
-		),
-		Promise.resolve()
-	);
-});
+      return initializedPlugins.reduce((promise, plugin) => {
+        return promise.then(() => {
+          return typeof plugin === 'function' ? plugin(root) : root;
+        });
+      }, Promise.resolve());
+    }
+  };
+}

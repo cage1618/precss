@@ -1,3 +1,5 @@
+# !!! This project is a replica of precss, because precss is no longer maintained !!!.
+
 # PreCSS [<img src="https://postcss.github.io/postcss/logo.svg" alt="PostCSS Logo" width="90" height="90" align="right">][postcss]
 
 [![NPM Version][npm-img]][npm-url]
@@ -40,7 +42,11 @@ media query ranges, and image sets.
 Add [PreCSS] to your build tool:
 
 ```bash
-npm install precss --save-dev
+npm install precsss --save-dev
+
+or
+
+yarn add -D precsss
 ```
 
 #### Node
