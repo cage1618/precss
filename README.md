@@ -1,12 +1,12 @@
-# !!! This project is a replica of precss, because precss is no longer maintained !!!.
+# !!! This project is a replica of PreCSSS, because PreCSSS is no longer maintained !!!.
 
-# PreCSS [<img src="https://postcss.github.io/postcss/logo.svg" alt="PostCSS Logo" width="90" height="90" align="right">][postcss]
+# PreCSSS [<img src="https://postcss.github.io/postcss/logo.svg" alt="PostCSS Logo" width="90" height="90" align="right">][postcss]
 
 [![NPM Version][npm-img]][npm-url]
 [![Build Status][cli-img]][cli-url]
 [![Support Chat][git-img]][git-url]
 
-[PreCSS] lets you use Sass-like markup and staged CSS features in CSS.
+[PreCSSS] lets you use Sass-like markup and staged CSS features in CSS.
 
 ```scss
 $blue: #056ef0;
@@ -33,30 +33,30 @@ $column: 200px;
 }
 ```
 
-PreCSS combines Sass-like syntactical sugar — like variables, conditionals, and
+PreCSSS combines Sass-like syntactical sugar — like variables, conditionals, and
 iterators — with emerging CSS features — like logical and custom properties,
 media query ranges, and image sets.
 
 ## Usage
 
-Add [PreCSS] to your build tool:
+Add [PreCSSS] to your build tool:
 
 ```bash
-npm install precsss --save-dev
+npm install PreCSSSs --save-dev
 
 or
 
-yarn add -D precsss
+yarn add -D PreCSSSs
 ```
 
 #### Node
 
-Use [PreCSS] to process your CSS:
+Use [PreCSSS] to process your CSS:
 
 ```js
-import precss from 'precss';
+import PreCSSS from 'PreCSSS';
 
-precss.process(YOUR_CSS);
+PreCSSS.process(YOUR_CSS);
 ```
 
 #### PostCSS
@@ -67,14 +67,14 @@ Add [PostCSS] to your build tool:
 npm install postcss --save-dev
 ```
 
-Use [PreCSS] as a plugin:
+Use [PreCSSS] as a plugin:
 
 ```js
 import postcss from 'postcss';
-import precss from 'precss';
+import PreCSSS from 'PreCSSS';
 
 postcss([
-  precss(/* options */)
+  PreCSSS(/* options */)
 ]).process(YOUR_CSS);
 ```
 
@@ -86,16 +86,16 @@ Add [Gulp PostCSS] to your build tool:
 npm install gulp-postcss --save-dev
 ```
 
-Use [PreCSS] in your Gulpfile:
+Use [PreCSSS] in your Gulpfile:
 
 ```js
 import postcss from 'gulp-postcss';
-import precss from 'precss';
+import PreCSSS from 'PreCSSS';
 
 gulp.task('css', function () {
   return gulp.src('./src/*.css').pipe(
     postcss([
-      precss(/* options */)
+      PreCSSS(/* options */)
     ])
   ).pipe(
     gulp.dest('.')
@@ -111,10 +111,10 @@ Add [Grunt PostCSS] to your build tool:
 npm install grunt-postcss --save-dev
 ```
 
-Use [PreCSS] in your Gruntfile:
+Use [PreCSSS] in your Gruntfile:
 
 ```js
-import precss from 'precss';
+import PreCSSS from 'PreCSSS';
 
 grunt.loadNpmTasks('grunt-postcss');
 
@@ -122,7 +122,7 @@ grunt.initConfig({
   postcss: {
     options: {
       use: [
-        precss(/* options */)
+        PreCSSS(/* options */)
       ]
     },
     dist: {
@@ -134,7 +134,7 @@ grunt.initConfig({
 
 # Plugins
 
-PreCSS is powered by the following plugins (in this order):
+PreCSSS is powered by the following plugins (in this order):
 
 - [postcss-extend-rule](https://github.com/jonathantneal/postcss-extend-rule)
 - [postcss-advanced-variables](https://github.com/jonathantneal/postcss-advanced-variables)
@@ -143,14 +143,14 @@ PreCSS is powered by the following plugins (in this order):
 - [postcss-property-lookup](https://github.com/simonsmith/postcss-property-lookup)
 - [postcss-nested](https://github.com/postcss/postcss-nested)
 
-[cli-img]: https://img.shields.io/travis/jonathantneal/precss/master.svg
-[cli-url]: https://travis-ci.org/jonathantneal/precss
+[cli-img]: https://img.shields.io/travis/jonathantneal/PreCSSS/master.svg
+[cli-url]: https://travis-ci.org/jonathantneal/PreCSSS
 [git-img]: https://img.shields.io/badge/chat-gitter-blue.svg
 [git-url]: https://gitter.im/postcss/postcss
-[npm-img]: https://img.shields.io/npm/v/precss.svg
-[npm-url]: https://www.npmjs.com/package/precss
+[npm-img]: https://img.shields.io/npm/v/PreCSSS.svg
+[npm-url]: https://www.npmjs.com/package/PreCSSS
 
 [Gulp PostCSS]: https://github.com/postcss/gulp-postcss
 [Grunt PostCSS]: https://github.com/nDmitry/grunt-postcss
 [PostCSS]: https://github.com/postcss/postcss
-[PreCSS]: https://github.com/jonathantneal/precss
+[PreCSSS]: https://github.com/cage1618/precss

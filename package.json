@@ -1,12 +1,12 @@
 {
   "name": "precsss",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Use Sass-like markup and staged CSS features in CSS",
-  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "author": "cage1618",
   "license": "CC0-1.0",
-  "repository": "jonathantneal/precss",
-  "homepage": "https://github.com/jonathantneal/precss#readme",
-  "bugs": "https://github.com/jonathantneal/precss/issues",
+  "repository": "cage1618/precss",
+  "homepage": "https://github.com/cage1618/precsss#readme",
+  "bugs": "https://github.com/jonathantneal/precsss/issues",
   "main": "index.js",
   "module": "index.mjs",
   "files": [
